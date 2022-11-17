@@ -1,0 +1,31 @@
+<section class="p-5 mb-5">
+
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+     <section class="section">
+          <div class="container">
+              <div class="columns is-centered">
+                    <div class="column is-6 p-5 loginform">
+                            <h1 class="title is-1 has-text-white has-text-centered">Forgot your password?</h1>
+                            <div class="form-data">
+                                <div class="field">
+                                    <div class="control">
+                                        <%= f.input :email, required: true, input_html: {class:"input"}, label_html: {class: "label has-text-white"},wrapper: false %>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <%= f.submit "Send me reset password instructions",class: "button is-primary" %>
+                                    </div>
+                                <div class="links mt-5">
+                                    <%= render "devise/shared/links" %> 
+                                </div>
+                            </div>
+                    </div>
+                </div>
+          </div>
+     </section>    
+<% end %>
+</div>
+</div>
+</div>
+</section>

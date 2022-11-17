@@ -1,0 +1,39 @@
+    <div class="mr-5 mt-5 title" id="timer">30:00</div>
+    <div class="columns is-centered start_paper_form">
+      <div class="column is-6">
+    <%= simple_form_for submit_paper_path, method: :post  do |f| %>
+    <% @paper.questions.each do |p| %>
+      <% p.multiple_choices.each do |q| %>
+         <div>
+         <input type="hidden" name="user_id" value="<%= current_user.id %>">
+        <input type="hidden" name="paper_id" value="<%= @paper.try(:id) %>">
+        <input type="hidden" name="question_id" value="<%= q.try(:id) %>">
+        <br>
+        <div class="field">
+          <label class="label"><%= p.title %>?</label>
+          <div class="control">
+            <label class="radio"><input type="radio" name="choice_<%=p.id %>" value="<%=q.ans1 %>" >  <%= q.ans1 %></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="radio"><input type="radio" name="choice_<%=p.id %>"  value="<%=q.ans2 %>">  <%= q.ans2 %></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="radio"><input type="radio" name="choice_<%=p.id%>"  value="<%=q.ans3 %>">  <%= q.ans3 %></label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="radio"><input type="radio" name="choice_<%=p.id %>"  value="<%=q.ans4 %>">  <%= q.ans4 %></label>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+      <%= f.submit "Submit", class: "button is-primary end-button" %>
+    <% end %>
+    </div>
+    </div>

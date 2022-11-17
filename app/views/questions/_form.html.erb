@@ -1,0 +1,39 @@
+<%= simple_form_for [@paper,@question] do |question| %>
+    <div class="field">
+        <div class="control">
+            <%= question.input :title,placeholder: 'Enter Question', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    <%= question.simple_fields_for :multiple_choices do |m| %>
+        <div class="field">
+        <div class="control">
+            <%= m.input :ans1,placeholder: 'Enter answer 1', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <%= m.input :ans2,placeholder: 'Enter answer 2', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <%= m.input :ans3,placeholder: 'Enter answer 3', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <%= m.input :ans4,placeholder: 'Enter answer 4', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    <% end %>
+
+    <div class="field">
+        <div class="control">
+            <%= question.input :correct_ans,placeholder: 'Enter correct answer', input_html: {class: "input"},label_html: {class: "label"},wrapper: false %>
+        </div>
+    </div>
+    
+    <div class="field">
+        <%= question.submit "Create Question",class: "button is-primary" %>
+    </div>
+<% end %>

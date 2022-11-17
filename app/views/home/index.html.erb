@@ -1,0 +1,316 @@
+<section class="section header">
+    <div class="columns">
+        <div class="column header-content is-6" data-aos="fade-down" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div>
+                <h1 class="title is-1 has-text-white woah simpleEntrance infinity" >Best Cadet Coaching</h1>
+                <p class="subtitle has-text-white is-5 mt-3 joincontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, quia commodi non reiciendis ex laboriosam dolorum consequuntur facilis nisi aperiam?</p>
+                <% if current_user %>
+                <p class="has-text-white">You are currently......<%= current_user.role %></p>
+                <% if current_user.admin? %>
+                    <p class="has-text-white"> There are <%= User.count %> users in website </p>
+                <% end %>
+                <% end %>
+            </div>
+            <div class="buttons is-right">
+                <button href="" class="button is-primary mt-5 is-medium joinbutton">Join Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about-us">
+    <div class="columns">
+        <div class="column is-7">
+            <h1 class="title is-2 about-heading" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">About Us</h1>
+            <p class="about-subtitle1" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sunt cupiditate est dolorum qui rem quia quisquam unde iusto sint? Harum necessitatibus deserunt consectetur facilis qui laborum ducimus labore laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae eius totam sunt dolorem, omnis laborum culpa eligendi iure? Quis.</p>
+            <p class="about-subtitle2" data-aos="fade-down" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure reiciendis soluta necessitatibus maiores corrupti asperiores est voluptates nobis ducimus.</p>
+            <div class="buttons is-right">
+                <button class="button is-primary mt-5 is-medium " data-aos="slide-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">Read More ...</button>
+            </div>
+        </div>
+        <div class="column is-offset-1">
+            <%= image_tag "blob.svg", class: "blob" %>
+            <%= image_tag "2.png", class: "blob-img" %>
+        </div>
+    </div>
+</section>
+
+<section class="section services">
+<h1 class="title is-2 has-text-white service-heading" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">Services We Provide</h1>
+    <div class="columns is-centered pt-5">
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath1"></div>
+                <div class="service-content">
+                    <h1 class="title is-2">01</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath2"></div>
+                <div class="service-content">
+                    <h1 class="title is-2 ">02</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath3"></div>
+                <div class="service-content">
+                    <h1 class="title is-2 ">03</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <div class="columns is-centered pt-5">
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath1"></div>
+                <div class="service-content">
+                    <h1 class="title is-2 ">04</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath2"></div>
+                <div class="service-content">
+                    <h1 class="title is-2 ">05</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+        <div class="column" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+            <div class="circle">
+                <div class="clippath3"></div>
+                <div class="service-content">
+                    <h1 class="title is-2 ">06</h1>
+                    <p class="service-content-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ab?</p>
+                </div>        
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote">
+        <section class="p-6 md:p-12 text-center md:text-left shadow-lg rounded-md" data-aos="slide-down" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+  <div class="flex justify-center">
+    <div class="max-w-3xl">
+      <div class="block p-6 rounded-lg shadow-lg quote-section m-4">
+        <div class="md:flex md:flex-row">
+          <div
+            class="md:w-96 w-36 flex justify-center items-center mb-6 lg:mb-0 mx-auto md:mx-0"
+          >
+            
+              <%= image_tag "1.png",class:"rounded-full shadow-md border-2" %>
+          </div>
+          <div class="md:ml-6">
+            <p class="text-white-500 text-2xl mb-6">
+            <span class="text-white-700 font-bold">"</span>
+                Education helps us get exposure to new ideas and concepts that we can use to appreciate and improve the world around us and the world within us
+            <span class="text-white-700 font-bold">"</span>
+            </p>
+            <p class="font-semibold text-xl mb-2 text-yellow-300">Hafiz Ikram Hussain</p>
+            <p class="font-semibold text-gray-500 mb-0">Instructor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+<section class="gallery-section">
+        <h1 class="title is-2 service-heading" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">Successful Students</h1>
+        <div class="columns">
+            <div class="column">
+            <div class="container-gallery">
+                <div class="content">
+                    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                    <div class="content-overlay"></div>
+                        <%= image_tag "s1.jpg",class: "content-image" %>
+                    <div class="content-details fadeIn-left">
+                        <h3>Student 1</h3>
+                        <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="column">
+            <div class="container-gallery">
+                <div class="content">
+                    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                    <div class="content-overlay"></div>
+                    <%= image_tag "s2.jpg",class: "content-image" %>
+                    <div class="content-details fadeIn-left">
+                        <h3>Student 2</h3>
+                        <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+                </div>
+                <div class="column">
+                    <div class="container-gallery">
+                        <div class="content">
+                            <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                            <div class="content-overlay"></div>
+                            <%= image_tag "s3.jpg",class: "content-image" %>
+                            <div class="content-details fadeIn-left">
+                                <h3>Student 3</h3>
+                                <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+            <div class="container-gallery">
+                <div class="content">
+                    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                    <div class="content-overlay"></div>
+                    <%= image_tag "s4.jpg",class: "content-image" %>
+                    <div class="content-details fadeIn-left">
+                        <h3>Student 4</h3>
+                        <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="column">
+            <div class="container-gallery">
+                <div class="content">
+                    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                    <div class="content-overlay"></div>
+                    <%= image_tag "s1.jpg",class: "content-image" %>
+                    <div class="content-details fadeIn-left">
+                        <h3>Student 5</h3>
+                        <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+                </div>
+                <div class="column">
+                    <div class="container-gallery">
+                        <div class="content">
+                            <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+                            <div class="content-overlay"></div>
+                            <%= image_tag "s3.jpg",class: "content-image" %>
+                            <div class="content-details fadeIn-left">
+                                <h3>Student 6</h3>
+                                <p>Military College Jhelum,Military College Jhelum,Military College Jhelum,Military College Jhelum,</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</section>
+
+<section class="testimonial-section">
+    <h1 class="title is-2 has-text-white testimonial-heading service-heading" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">Testimonials</h1>
+       <section >
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm">
+          <p class="mb-8 font-light lg:mb-16 sm:text-xl has-text-white">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
+      </div> 
+      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
+                  <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme.</p>
+                  <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
+                  <p class="my-4">If you care for your time, I hands down would go with this."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Bonnie Green</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
+                  </div>
+              </figcaption>    
+          </figure>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+                  <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
+                  <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Roberta Casas</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+                  </div>
+              </figcaption>    
+          </figure>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
+                  <p class="my-4">"As someone who mainly designs in the browser, I've been a casual user of Figma, but as soon as I saw and started playing with FlowBite my mind was 🤯.</p>
+                  <p class="my-4">Everything is so well structured and simple to use (I've learnt so much about Figma by just using the toolkit).</p>
+                  <p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Jese Leos</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+                  </div>
+              </figcaption>    
+          </figure>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
+                  <p class="my-4">"This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.</p>
+                  <p class="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Joseph McFall</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
+                  </div>
+              </figcaption>    
+          </figure>
+      </div>
+      <div class="text-center">
+          <a href="#" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Show more...</a> 
+      </div>
+</section>
+</section>
+
+
+<section class="faq-section">
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+	<div class="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+		<h2 class="title is-2 service-heading font-semibold sm:text-4xl">Frequently Asked Questions</h2>
+		<p class="mt-4 mb-8 dark:text-gray-400">Sagittis tempor donec id vestibulum viverra. Neque condimentum primis orci at lacus amet bibendum.</p>
+		<div class="space-y-4">
+			<details class="w-full border rounded-lg faq-card">
+				<summary class="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">Ex orci laoreet egestas sapien magna egestas scelerisque?</summary>
+				<p class="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">Lectus iaculis orci metus vitae ligula dictum per. Nisl per nullam taciti at adipiscing est. </p>
+			</details>
+			<details class="w-full border rounded-lg faq-card">
+				<summary class="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">Lorem at arcu rutrum viverra metus sapien venenatis lobortis odio?</summary>
+				<p class="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">Tincidunt ut hac condimentum rhoncus phasellus nostra. Magna porttitor egestas tincidunt neque vehicula potenti. </p>
+			</details>
+			<details class="w-full border rounded-lg faq-card">
+				<summary class="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">Eleifend feugiat sollicitudin laoreet adipiscing bibendum suscipit erat?</summary>
+				<p class="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">Justo libero tellus integer tincidunt justo semper consequat venenatis aliquet imperdiet. Ultricies urna proin fusce nulla pretium sodales vel magna et massa euismod vulputate sed. </p>
+			</details>
+		</div>
+	</div>
+</section>
+</section>
+<%= render 'footer' %>

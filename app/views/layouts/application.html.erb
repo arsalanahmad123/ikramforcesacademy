@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Academy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://use.fontawesome.com/9a522142da.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <%= render 'layouts/flash' %>
+    </div>
+    <%= render 'layouts/navigation' %>
+      <%= yield %>
+    <%= render 'layouts/modal' %>
+  </body>
+  <script>
+        AOS.init();
+        // loader animation
+
+
+  </script>
+</html>

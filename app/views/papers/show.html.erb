@@ -1,0 +1,51 @@
+<!-- component -->
+<section class="container mx-auto p-6 font-mono">
+  <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-x-auto">
+      <table class="w-full">
+        <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3">Question</th>
+            <th class="px-4 py-3">Ans_1</th>
+            <th class="px-4 py-3">Ans_2</th>
+            <th class="px-4 py-3">Ans_3</th>
+            <th class="px-4 py-3">Ans_4</th>
+            <th class="px-4 py-3">Correct_Answer</th>
+            <th class="px-4 py-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+        <% @paper.questions.each do |p| %>
+            <% p.multiple_choices.each do |q| %>
+          <tr class="text-gray-700">
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                <div class="relative w-8 h-8 mr-3 rounded-full md:block">
+                  <i class="object-cover w-full h-full rounded-full fa fa-chevron-down"></i>
+                  <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                </div>
+                <div>
+                  <p class="font-semibold text-black"><%= p.title %></p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-ms font-semibold border"><%= q.ans1 %></td>
+            <td class="px-4 py-3 text-ms font-semibold border"><%= q.ans2 %></td>
+            <td class="px-4 py-3 text-ms font-semibold border"><%= q.ans3 %></td>
+            <td class="px-4 py-3 text-ms font-semibold border"><%= q.ans4 %></td>
+            <td class="px-4 py-3 text-ms font-semibold border"><%= p.correct_ans %></td>
+            <td class="px-4 py-3 text-sm border"><%= button_to "Delete Question",paper_question_path(@paper,p),method: :delete,class: "button is-danger is-small" %>
+            </td>
+          </tr>
+          <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<div class="buttons is-centered">
+  <%= link_to "Add Question",new_paper_question_path(@paper),class: "button is-primary" %>
+</div>

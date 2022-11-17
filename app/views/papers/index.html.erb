@@ -1,0 +1,30 @@
+<div class="columns is-centered mt-5">
+<div class="column is-6">
+<% @papers.each do |paper| %>
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      <%= paper.subject %>
+    </p>
+    <p class="subtitle">
+      <%= paper.created_at %>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        <%= link_to "Start Paper",start_paper_path(paper),class: "button is-info" %>
+      </span>
+    </p>
+    <% if current_user && current_user.admin? %>
+    <p class="card-footer-item">
+      <span>
+        <%= link_to "Edit Paper",edit_paper_path(paper),class: "button is-primary" %>
+      </span>
+    </p>
+    <% end %>
+  </footer>
+</div>
+<% end %>
+</div>
+</div>

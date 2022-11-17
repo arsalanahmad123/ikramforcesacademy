@@ -1,0 +1,31 @@
+<div class="columns is-centered mt-5">
+<div class="column is-6">
+<% @users.each do |user| %>
+<div class="card mt-5">
+  <div class="card-content">
+    <p class="title">
+      <%= user.name %>
+    </p>
+    <p class="subtitle">
+      <%= user.email %>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <% if user.is_block==true %>
+    <p class="card-footer-item">
+      <span>
+        <%= link_to "Unblock", unblock_user_path(user),class: "button is-primary" %>
+      </span>
+    </p>
+    <% elsif user.is_block==false %>
+    <p class="card-footer-item">
+      <span>
+        <%= link_to "Block", unblock_user_path(user),class: "button is-danger" %>
+      </span>
+    </p>
+    <% end %>
+  </footer>
+</div>
+<% end %>
+</div>
+</div>
