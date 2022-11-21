@@ -1,31 +1,58 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<section class="p-5 mb-5">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
+<section class="section">
+<div class="columns is-centered">
+<div class="column is-4 p-5 loginform">
+<h1 class="title is-1 has-text-white has-text-centered">Edit<%= resource_name.to_s.humanize %></h1>
+<div class="form-data">
+    <div class="field">
+      <div class="control">
+        <%= f.input :name,required: true,input_html: {class:"input"}, label_html: {class: "label has-text-white"},wrapper: false %>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <%= f.input :email,required: true,input_html: {class:"input"}, label_html: {class: "label has-text-white"},wrapper: false %>
+      </div>
+    </div>
+    <div class="field">
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-
-    <%= f.input :password,
+    </div>
+    <div class="field">
+      <div class="control">
+        <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+                input_html: { class: "input" },label_html: {label: "label has-text-white"},wrapper: false %>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <%= f.input :password_confirmation,
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
+                input_html: { class: "input" },label_html: {class: "label has-text-white"},wrapper: false %>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+            <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
+                input_html: { class: "input" },label_html: {label: "label has-text-white"},wrapper: false %>
+        </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div class="field">
+    <div class="control">
+      <%= f.submit "Update",data: {turbo: false},class: "button is-primary" %>
+    </div>
   </div>
+  </div>
+</div>
+</div>
+</section>
 <% end %>
 
 <h3>Cancel my account</h3>
