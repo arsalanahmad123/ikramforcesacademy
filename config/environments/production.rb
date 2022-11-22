@@ -32,6 +32,22 @@ Rails.application.configure do
 
   config.hosts << "ikramforcesacademy.up.railway.app"
 
+
+  config.action_mailer.default_url_options = { host: 'ikramforcesacademy.up.railway.app' }
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+  :user_name => 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+  :password => Rails.application.credentials.sendgrid_password, # This is the secret sendgrid API key which was issued during API key creation
+  :domain => 'ikramforcesacademy.up.railway.app',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
+
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.perform_deliveries = true 
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
