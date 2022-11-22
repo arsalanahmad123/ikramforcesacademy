@@ -1,1 +1,1 @@
-web: rails db:migrate && rails db:seed && bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-production} 
+web:rails db:seed && rails db:migrate bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-production} 
