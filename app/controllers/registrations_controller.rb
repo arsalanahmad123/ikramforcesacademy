@@ -10,7 +10,8 @@ class RegistrationsController < Devise::RegistrationsController
         redirect_to root_path
         flash[:notice] = "A registration email has been sent to your email address. Please follow the instructions in the email to activate your account."
     else
-        render :new
+        render 'devise/registrations/new'
+        flash[:alert] = "There was a problem creating your account. Please try again."
     end
  end
 
